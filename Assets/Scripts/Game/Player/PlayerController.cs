@@ -6,6 +6,15 @@ public class PlayerController : MonoBehaviour {
 
 	public float speed = 1000.0f;
 	Rigidbody m_Rigidbody;
+	public static PlayerController instance;
+	public Vector3 speedMovementValue;
+	void Awake(){
+		if(PlayerController.instance==null){
+			PlayerController.instance = this;
+		}else{
+			Destroy (this.gameObject);
+		}
+	}// end to awake
 
 	// Use this for initialization
 	void Start () {
@@ -29,7 +38,11 @@ public class PlayerController : MonoBehaviour {
 		// transform.Translate (translation, 0, 0);
 		Vector3 v3 = new Vector3(translation, translationUp, 0); 
 		m_Rigidbody.AddForce(v3);
-
 		// transform.Translate (0, translationUp, 0);
+		speedMovementValue = m_Rigidbody.velocity;
 	}
+
+	public Vector3 SpeedMovement(){
+		return speedMovementValue;
+	}// end to SpeedMovement
 }
