@@ -8,13 +8,17 @@ public class PlayerController : MonoBehaviour {
 	Rigidbody m_Rigidbody;
 	public static PlayerController instance;
 	public Vector3 speedMovementValue;
-	void Awake(){
-		if(PlayerController.instance==null){
+
+	public bool buttonLeftPressed = false;
+	public bool buttonRightPressed = false;
+
+	void Awake () {
+		if (PlayerController.instance == null) {
 			PlayerController.instance = this;
-		}else{
+		} else {
 			Destroy (this.gameObject);
 		}
-	}// end to awake
+	} // end to awake
 
 	// Use this for initialization
 	void Start () {
@@ -26,23 +30,44 @@ public class PlayerController : MonoBehaviour {
 		// Make it move 10 meters per second instead of 10 meters per frame...
 		float translation = Input.GetAxis ("Horizontal") * speed;
 		float translationUp = Input.GetAxis ("Vertical") * speed;
-		translation *= Time.deltaTime;
-		translationUp *= Time.deltaTime;
 
-		// Get the horizontal and vertical axis.
-		// By default they are mapped to the arrow keys.
-		// The value is in the range -1 to 1
-		// float translation = Input.GetAxis ("Vertical") * speed;
+		if (translation != 0f || translationUp != 0f) {
+			translation *= Time.deltaTime;
+			translationUp *= Time.deltaTime;
 
-		// Move translation along the object's z-axis
-		// transform.Translate (translation, 0, 0);
-		Vector3 v3 = new Vector3(translation, translationUp, 0); 
-		m_Rigidbody.AddForce(v3);
-		// transform.Translate (0, translationUp, 0);
-		speedMovementValue = m_Rigidbody.velocity;
+			// Get the horizontal and vertical axis.
+			// By default they are mapped to the arrow keys.
+			// The value is in the range -1 to 1
+			// float translation = Input.GetAxis ("Vertical") * speed;
+
+			// Move translation along the object's z-axis
+			// transform.Translate (translation, 0, 0);
+			Vector3 v3 = new Vector3 (translation, translationUp, 0);
+			m_Rigidbody.AddForce (v3);
+			// transform.Translate (0, translationUp, 0);
+			speedMovementValue = m_Rigidbody.velocity;
+		}
+
+		checkButtonsActions ();
 	}
 
-	public Vector3 SpeedMovement(){
+	private void checkButtonsActions () {
+		if (buttonLeftPressed || buttonRightPressed) {
+			float translation = 1.1f * Time.deltaTime * speed;
+			if (buttonLeftPressed && buttonRightPressed) {
+				Vector3 v3 = new Vector3 (0, translation, 0);
+				m_Rigidbody.AddForce (v3);
+			} else if (buttonLeftPressed) {
+				Vector3 v3 = new Vector3 (-translation, 0, 0);
+				m_Rigidbody.AddForce (v3);
+			} else if (buttonRightPressed) {
+				Vector3 v3 = new Vector3 (translation, 0, 0);
+				m_Rigidbody.AddForce (v3);
+			}
+		}
+	}
+
+	public Vector3 SpeedMovement () {
 		return speedMovementValue;
-	}// end to SpeedMovement
+	} // end to SpeedMovement
 }
