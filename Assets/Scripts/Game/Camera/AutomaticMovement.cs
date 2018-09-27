@@ -41,10 +41,10 @@ public class AutomaticMovement : MonoBehaviour {
 			PlayerController.instance.SpeedMovement ().y < -5 ||
 			PlayerController.instance.SpeedMovement ().x > 5 ||
 			PlayerController.instance.SpeedMovement ().x < -5) {
-			if(this.GetComponent<Camera> ().orthographicSize < 8f)
+			if(this.GetComponent<Camera> ().orthographicSize < 15f)
 				this.GetComponent<Camera> ().orthographicSize =this.GetComponent<Camera> ().orthographicSize + 0.2f * speedSmoothMovementCamera *Time.deltaTime;
 		} else {
-			if(this.GetComponent<Camera> ().orthographicSize >= 5f){
+			if(this.GetComponent<Camera> ().orthographicSize >= 10f){
 				this.GetComponent<Camera> ().orthographicSize = this.GetComponent<Camera> ().orthographicSize -0.2f * speedSmoothMovementCamera * Time.deltaTime;
 			}
 				
