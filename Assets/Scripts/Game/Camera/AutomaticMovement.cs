@@ -35,17 +35,18 @@ public class AutomaticMovement : MonoBehaviour {
 	}// end To fixedupdate
 
 	public void checkVelocityPlayer(){
-		
 		if (
-			PlayerController.instance.SpeedMovement ().y > 5 ||
-			PlayerController.instance.SpeedMovement ().y < -5 ||
-			PlayerController.instance.SpeedMovement ().x > 5 ||
-			PlayerController.instance.SpeedMovement ().x < -5) {
+			PlayerController.instance.SpeedMovement ().y > 3f ||
+			PlayerController.instance.SpeedMovement ().y < -3f ||
+			PlayerController.instance.SpeedMovement ().x > 3f ||
+			PlayerController.instance.SpeedMovement ().x < -3f) {
+			Debug.Log ("alejando");
 			if(this.GetComponent<Camera> ().orthographicSize < 15f)
-				this.GetComponent<Camera> ().orthographicSize =this.GetComponent<Camera> ().orthographicSize + 0.2f * speedSmoothMovementCamera *Time.deltaTime;
+				this.GetComponent<Camera> ().orthographicSize =this.GetComponent<Camera> ().orthographicSize + 0.5f * speedSmoothMovementCamera *Time.deltaTime;
 		} else {
-			if(this.GetComponent<Camera> ().orthographicSize >= 10f){
-				this.GetComponent<Camera> ().orthographicSize = this.GetComponent<Camera> ().orthographicSize -0.2f * speedSmoothMovementCamera * Time.deltaTime;
+			Debug.Log ("Acercando");
+			if(this.GetComponent<Camera> ().orthographicSize > 10f){
+				this.GetComponent<Camera> ().orthographicSize = this.GetComponent<Camera> ().orthographicSize -0.5f * speedSmoothMovementCamera * Time.deltaTime;
 			}
 				
 		}
