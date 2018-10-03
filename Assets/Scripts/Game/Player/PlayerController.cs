@@ -36,8 +36,6 @@ public class PlayerController : MonoBehaviour {
 			translationUp *= Time.deltaTime;
 			Vector3 v3 = new Vector3 (translation, translationUp, 0);
 			m_Rigidbody.AddForce (v3);
-			// transform.Translate (0, translationUp, 0);
-
 		}
 		speedMovementValue = m_Rigidbody.velocity;
 		checkButtonsActions ();
