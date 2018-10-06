@@ -37,5 +37,8 @@ public class ControlVida : MonoBehaviour {
 			cantidadVida -= 5;
 			vida.text= "" + cantidadVida;
 		}// 
+		if(cantidadVida <= 0){
+			ControlMenus.instance.gameOver ();
+		}
 	}// fin on collideer enter
 }
