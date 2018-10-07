@@ -10,13 +10,8 @@ public class ControlVida : MonoBehaviour {
 		vida.text= "" + cantidadVida;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
 	void OnCollisionEnter(Collision cinfo){
-		Debug.Log (cinfo.relativeVelocity.magnitude);
+		//Debug.Log (cinfo.relativeVelocity.magnitude);
 		if(cinfo.relativeVelocity.magnitude > 5){
 			cantidadVida -= 5;
 			vida.text= "" + cantidadVida;

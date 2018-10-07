@@ -1045,6 +1045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   escena: 1
+  siguienteEscena: 2
 --- !u!4 &515077787
 Transform:
   m_ObjectHideFlags: 0
@@ -2687,8 +2688,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 867540106}
-        m_MethodName: reiniciarNivel
+      - m_Target: {fileID: 515077786}
+        m_MethodName: CargarSiguienteEscena
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
