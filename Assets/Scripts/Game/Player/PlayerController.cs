@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour {
 	public bool buttonLeftPressed = false;
 	public bool buttonRightPressed = false;
 
+	public ParticleSystem particle;
+
 	void Awake () {
 		if (PlayerController.instance == null) {
 			PlayerController.instance = this;
@@ -23,6 +25,7 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		m_Rigidbody = GetComponent<Rigidbody> ();
+		particle.startSpeed = 0f;
 	}
 
 	// Update is called once per frame
@@ -36,6 +39,9 @@ public class PlayerController : MonoBehaviour {
 			translationUp *= Time.deltaTime;
 			Vector3 v3 = new Vector3 (translation, translationUp, 0);
 			m_Rigidbody.AddForce (v3);
+			controlParticles (6f, translation > 0, translation < 0);
+		} else {
+			controlParticles (0f, false, false);
 		}
 		speedMovementValue = m_Rigidbody.velocity;
 		checkButtonsActions ();
@@ -54,6 +60,23 @@ public class PlayerController : MonoBehaviour {
 				Vector3 v3 = new Vector3 (translation, 0, 0);
 				m_Rigidbody.AddForce (v3);
 			}
+		}
+	}
+
+	private void controlParticles (float speed, bool left, bool right) {
+		particle.startSpeed = speed;
+		if (left) {
+			var x = particle.shape;
+			x.rotation = new Vector3 (0, -90, 0); // solve my problem
+			x.position = new Vector3 (-1, 0, -0.65f);
+		} else if (right) {
+			var x = particle.shape;
+			x.rotation = new Vector3 (0, 90, 0); // solve my problem
+			x.position = new Vector3 (1, 0, -0.65f);
+		} else {
+			var x = particle.shape;
+			x.rotation = new Vector3 (0, 0, 0); // solve my problem
+			x.position = new Vector3 (0, 0, 0);
 		}
 	}
 
