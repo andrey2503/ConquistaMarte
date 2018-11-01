@@ -7214,7 +7214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 753901d9d75248e4db498d1c8f9a68c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
+  speed: 150
   speedMovementValue: {x: 0, y: 0, z: 0}
   buttonLeftPressed: 0
   buttonRightPressed: 0
