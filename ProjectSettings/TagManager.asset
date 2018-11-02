@@ -6,6 +6,7 @@ TagManager:
   tags:
   - plataforma
   - Rover
+  - Cadena
   layers:
   - Default
   - TransparentFX
