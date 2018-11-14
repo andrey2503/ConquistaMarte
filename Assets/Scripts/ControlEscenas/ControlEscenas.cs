@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ControlEscenas : MonoBehaviour {
 	public int escena=1;
 	public int siguienteEscena=1;
+	public int tiempoEspera = 0;
 	public static ControlEscenas instance;
 	void Awake(){
 		if(ControlEscenas.instance==null){
@@ -23,4 +24,9 @@ public class ControlEscenas : MonoBehaviour {
 		SceneManager.LoadScene (siguienteEscena);
 	}// fin de cargarescena
 
+	private IEnumerator SceneSwitcher () {
+		if(tiempoEspera != 0)
+        yield return new WaitForSeconds (tiempoEspera);
+        SceneManager.LoadScene (siguienteEscena);
+    }
 }

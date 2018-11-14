@@ -38,7 +38,8 @@ public class PlayerController : MonoBehaviour {
 			translation *= Time.deltaTime;
 			translationUp *= Time.deltaTime;
 			Vector3 v3 = new Vector3 (translation, translationUp, 0);
-			m_Rigidbody.AddForce (v3);
+			m_Rigidbody.AddForce (transform.up * translationUp);
+			m_Rigidbody.AddTorque(new Vector3 (0, 0, -translation * .1f ));
 			controlParticles (6f, translation > 0, translation < 0);
 		} else {
 			controlParticles (0f, false, false);
@@ -52,13 +53,13 @@ public class PlayerController : MonoBehaviour {
 			float translation = 1.1f * Time.deltaTime * speed;
 			if (buttonLeftPressed && buttonRightPressed) {
 				Vector3 v3 = new Vector3 (0, translation, 0);
-				m_Rigidbody.AddForce (v3);
+				m_Rigidbody.AddRelativeForce (v3);
 			} else if (buttonLeftPressed) {
 				Vector3 v3 = new Vector3 (-translation, 0, 0);
-				m_Rigidbody.AddForce (v3);
+				m_Rigidbody.AddRelativeForce (v3);
 			} else if (buttonRightPressed) {
 				Vector3 v3 = new Vector3 (translation, 0, 0);
-				m_Rigidbody.AddForce (v3);
+				m_Rigidbody.AddRelativeForce (v3);
 			}
 		}
 	}
@@ -67,12 +68,12 @@ public class PlayerController : MonoBehaviour {
 		particle.startSpeed = speed;
 		if (left) {
 			var x = particle.shape;
-			x.rotation = new Vector3 (0, -90, 0); // solve my problem
-			x.position = new Vector3 (-1, 0, -0.65f);
+			x.rotation = new Vector3 (0, 0, 0); // solve my problem
+			x.position = new Vector3 (-.7f, -1, 0);
 		} else if (right) {
 			var x = particle.shape;
-			x.rotation = new Vector3 (0, 90, 0); // solve my problem
-			x.position = new Vector3 (1, 0, -0.65f);
+			x.rotation = new Vector3 (0, 0, 0); // solve my problem
+			x.position = new Vector3 (.7f, -1, 0);
 		} else {
 			var x = particle.shape;
 			x.rotation = new Vector3 (0, 0, 0); // solve my problem
