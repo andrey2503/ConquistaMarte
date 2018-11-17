@@ -14,32 +14,32 @@ public class ControlVida : MonoBehaviour {
 	
 	void OnCollisionEnter(Collision cinfo){
 		//Debug.Log (cinfo.relativeVelocity.magnitude);
-		if(cinfo.relativeVelocity.magnitude > 5){
+		if(cinfo.relativeVelocity.magnitude >= 2){
 			cantidadVida -= 5;
 			vida.text= "" + cantidadVida;
 			barraVida.size = cantidadVida/100f;
 
 		}//
-		if(cinfo.relativeVelocity.magnitude > 15){
-			cantidadVida -= 5;
+		if(cinfo.relativeVelocity.magnitude > 3){
+			cantidadVida -= 10;
 			vida.text= "" + cantidadVida;
 			barraVida.size = cantidadVida/100f;
 
 		}// 
-		if(cinfo.relativeVelocity.magnitude > 25){
-			cantidadVida -= 5;
+		if(cinfo.relativeVelocity.magnitude > 5){
+			cantidadVida -= 20;
 			vida.text= "" + cantidadVida;
 			barraVida.size = cantidadVida/100f;
 
 		}// 
-		if(cinfo.relativeVelocity.magnitude > 35){
-			cantidadVida -= 5;
+		if(cinfo.relativeVelocity.magnitude > 7){
+			cantidadVida -= 30;
 			vida.text= "" + cantidadVida;
 			barraVida.size = cantidadVida/100f;
 
 		}// 
-		if(cinfo.relativeVelocity.magnitude > 50){
-			cantidadVida -= 5;
+		if(cinfo.relativeVelocity.magnitude > 10){
+			cantidadVida -= 50;
 			vida.text= "" + cantidadVida;
 			barraVida.size = cantidadVida/100f;
 

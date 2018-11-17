@@ -15,7 +15,7 @@ public class ControlPlataforma : MonoBehaviour {
 		
 	void OnCollisionEnter(Collision sinfo){
 		//Debug.Log ("estado en el colision");
-		//Debug.Log (sinfo.gameObject.tag);
+		Debug.Log (sinfo.gameObject.tag);
 		StartCoroutine (cuentaPlataforma());
 	}// fin de oncollioson stay
 

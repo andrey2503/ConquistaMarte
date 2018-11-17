@@ -9305,7 +9305,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.023555357, y: 0.47422582}
   m_AnchorMax: {x: 0.9695553, y: 0.51600003}
-  m_AnchoredPosition: {x: -177.10004, y: 140.4}
+  m_AnchoredPosition: {x: -641.99994, y: 521}
   m_SizeDelta: {x: 4, y: 7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1200376705
@@ -9556,8 +9556,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 263, y: 0}
-  m_SizeDelta: {x: 526, y: 20}
+  m_AnchoredPosition: {x: 904.54, y: -5.56}
+  m_SizeDelta: {x: 1808.9, y: 34.94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1274749976
 MonoBehaviour:
@@ -11389,8 +11389,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 20}
+  m_AnchoredPosition: {x: -5.6643066, y: 13.03}
+  m_SizeDelta: {x: -11.328, y: -6.0585}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1682643569
 MonoBehaviour:
@@ -12743,6 +12743,7 @@ GameObject:
   - component: {fileID: 2063074234}
   - component: {fileID: 2063074233}
   - component: {fileID: 2063074232}
+  - component: {fileID: 2063074235}
   m_Layer: 0
   m_Name: Cube (7)
   m_TagString: plataforma
@@ -12817,6 +12818,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2063074230}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2063074235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2063074230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52512e60cab45c14fb42cbcdaa3c0ba7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  segundos: 3
 --- !u!1 &2075080654
 GameObject:
   m_ObjectHideFlags: 0
