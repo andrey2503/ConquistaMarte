@@ -6,6 +6,10 @@ public class ControlVida : MonoBehaviour {
 	public Text vida;
 	int cantidadVida=100;
 	public Scrollbar barraVida;
+
+	public GameObject gameOverAnimation;
+	public GameObject nave;
+	public Rigidbody naveRigidBody;
 	// Use this for initialization
 	void Start () {
 		vida.text= "" + cantidadVida;
@@ -45,7 +49,16 @@ public class ControlVida : MonoBehaviour {
 
 		}// 
 		if(cantidadVida <= 0){
-			ControlMenus.instance.gameOver ();
+			Destroy(nave);
+			naveRigidBody.isKinematic = true;
+			gameOverAnimation.active = true;
+			StartCoroutine(gameOver());
 		}
 	}// fin on collideer enter
+
+	IEnumerator gameOver()
+    {
+        yield return new WaitForSeconds(2);
+		ControlMenus.instance.gameOver ();
+    }
 }
