@@ -11430,7 +11430,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 867540106}
+      - m_Target: {fileID: 515077786}
         m_MethodName: reiniciarNivel
         m_Mode: 1
         m_Arguments:
@@ -18839,7 +18839,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.023555357, y: 0.47422582}
   m_AnchorMax: {x: 0.9695553, y: 0.51600003}
-  m_AnchoredPosition: {x: -642, y: 520.9997}
+  m_AnchoredPosition: {x: -642, y: 520.99976}
   m_SizeDelta: {x: 4, y: 7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1200376705
@@ -26385,7 +26385,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 8e71beee473f18d4488afd5df90c4ebc, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0

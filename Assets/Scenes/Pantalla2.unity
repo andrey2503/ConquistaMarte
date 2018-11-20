@@ -2427,7 +2427,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 867540106}
+      - m_Target: {fileID: 515077786}
         m_MethodName: reiniciarNivel
         m_Mode: 1
         m_Arguments:
@@ -35373,7 +35373,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.023555357, y: 0.47422582}
   m_AnchorMax: {x: 0.9695553, y: 0.51600003}
-  m_AnchoredPosition: {x: -642, y: 520.9997}
+  m_AnchoredPosition: {x: -642, y: 520.99976}
   m_SizeDelta: {x: 4, y: 7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2126019477
