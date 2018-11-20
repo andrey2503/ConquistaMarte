@@ -31,4 +31,8 @@ public class ControlMenus : MonoBehaviour {
 	public void gameWin(){
 		gamewin.SetActive (true);
 	}// fin de gameWin
+
+	public void SiguienteNivel (string nivel){
+			
+	}// fin de siguiente nivel
 }

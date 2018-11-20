@@ -51,7 +51,7 @@ public class ControlVida : MonoBehaviour {
 		if(cantidadVida <= 0){
 			Destroy(nave);
 			naveRigidBody.isKinematic = true;
-			gameOverAnimation.active = true;
+			gameOverAnimation.SetActive(true);
 			StartCoroutine(gameOver());
 		}
 	}// fin on collideer enter

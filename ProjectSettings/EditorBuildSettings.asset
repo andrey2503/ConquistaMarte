@@ -12,9 +12,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Pantalla1.unity
     guid: cd58c966121e61643bf726177ca9f3b1
   - enabled: 1
-    path: Assets/Scenes/Game2.unity
+    path: Assets/Scenes/robert.unity
     guid: b9c5bb83a16dd9043a2cd1597c29c5d7
   - enabled: 1
     path: Assets/Scenes/Game3(Rover).unity
     guid: 8ff32d22631066048abc03ed51daa607
+  - enabled: 1
+    path: Assets/Scenes/Pantalla2.unity
+    guid: 2942c021c51146f4b8096dcd0584eab6
+  - enabled: 1
+    path: Assets/Scenes/Pantalla3.unity
+    guid: dc5765f2e9abb1846bc54dcb91d13248
+  - enabled: 1
+    path: Assets/Scenes/Pantalla4.unity
+    guid: 9afa48ab0d1f80644a06375693ae3978
   m_configObjects: {}

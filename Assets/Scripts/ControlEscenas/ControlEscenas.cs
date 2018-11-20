@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ControlEscenas : MonoBehaviour {
-	public int escena=1;
-	public int siguienteEscena=1;
+	public string escena="Pantalla";
+	public string escenaActual="Pantalla";
 	public int tiempoEspera = 0;
 	public static ControlEscenas instance;
 	void Awake(){
@@ -16,17 +16,19 @@ public class ControlEscenas : MonoBehaviour {
 		}
 	}
 
+
+
 	public void CargarEscena(){
 		SceneManager.LoadScene (escena);
-	}// fin de cargarescena
-
-	public void CargarSiguienteEscena(){
-		SceneManager.LoadScene (siguienteEscena);
 	}// fin de cargarescena
 
 	private IEnumerator SceneSwitcher () {
 		if(tiempoEspera != 0)
         yield return new WaitForSeconds (tiempoEspera);
-        SceneManager.LoadScene (siguienteEscena);
+		CargarEscena();
     }
+
+	public void reiniciarNivel(){
+		SceneManager.LoadScene (escenaActual);
+	}//
 }

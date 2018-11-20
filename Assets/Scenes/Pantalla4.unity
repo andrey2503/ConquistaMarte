@@ -10027,8 +10027,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d20390bcfaf6464b86aaeab4289ef52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  escena: 1
-  siguienteEscena: 1
+  escena: PantallaMenu
+  escenaActual: Pantalla4
   tiempoEspera: 0
 --- !u!4 &515077787
 Transform:
@@ -10544,7 +10544,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 867540106}
+      - m_Target: {fileID: 515077786}
         m_MethodName: reiniciarNivel
         m_Mode: 1
         m_Arguments:
@@ -22308,6 +22308,7 @@ GameObject:
   - component: {fileID: 1945962314}
   - component: {fileID: 1945962313}
   - component: {fileID: 1945962312}
+  - component: {fileID: 1945962315}
   m_Layer: 0
   m_Name: Cube (7)
   m_TagString: plataforma
@@ -22382,6 +22383,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1945962310}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1945962315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1945962310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52512e60cab45c14fb42cbcdaa3c0ba7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  segundos: 2
 --- !u!1 &1982293235
 GameObject:
   m_ObjectHideFlags: 0
@@ -24090,7 +24103,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.023555357, y: 0.47422582}
   m_AnchorMax: {x: 0.9695553, y: 0.51600003}
-  m_AnchoredPosition: {x: -641.99994, y: 521}
+  m_AnchoredPosition: {x: -642, y: 520.99976}
   m_SizeDelta: {x: 4, y: 7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2126019477
