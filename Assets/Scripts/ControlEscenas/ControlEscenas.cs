@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ControlEscenas : MonoBehaviour {
 	public string escena="Pantalla";
 	public string escenaActual="Pantalla";
+	public string escenaMenu="PantallaMenu";
 	public int tiempoEspera = 0;
 	public static ControlEscenas instance;
 	void Awake(){
@@ -30,5 +31,9 @@ public class ControlEscenas : MonoBehaviour {
 
 	public void reiniciarNivel(){
 		SceneManager.LoadScene (escenaActual);
+	}//
+
+	public void irMenu(){
+		SceneManager.LoadScene (escenaMenu);
 	}//
 }

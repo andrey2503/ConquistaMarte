@@ -15,7 +15,20 @@ public class ControlVida : MonoBehaviour {
 		vida.text= "" + cantidadVida;
 		barraVida.size = cantidadVida;
 	}
-	
+
+	void OnCollisionStay(Collision cinfo){
+		Debug.Log ("Entro");
+		//cantidadVida -= 3;
+		if(cinfo.gameObject.tag=="Player"){
+		}
+	}
+
+	void OnCollisionExit(Collision cinfo){
+		Debug.Log ("Salio");
+		//cantidadVida -= 3;
+		if (cinfo.gameObject.tag == "Player") {
+		}
+	}
 	void OnCollisionEnter(Collision cinfo){
 		//Debug.Log (cinfo.relativeVelocity.magnitude);
 		if(cinfo.relativeVelocity.magnitude >= 2){
