@@ -10,10 +10,23 @@ public class ControlVida : MonoBehaviour {
 	public GameObject gameOverAnimation;
 	public GameObject nave;
 	public Rigidbody naveRigidBody;
+	public static ControlVida instaciate;
 	// Use this for initialization
 	void Start () {
 		vida.text= "" + cantidadVida;
 		barraVida.size = cantidadVida;
+	}
+
+	void Awake(){
+		if(ControlVida.instaciate==null){
+			ControlVida.instaciate = this;
+		}else{
+			Destroy (this.gameObject);
+		}
+	}
+
+	public int getVida(){
+		return cantidadVida;
 	}
 
 	void OnCollisionStay(Collision cinfo){

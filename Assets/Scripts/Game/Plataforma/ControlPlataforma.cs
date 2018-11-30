@@ -26,7 +26,11 @@ public class ControlPlataforma : MonoBehaviour {
 		if (segundos >= 3) {
 			Debug.Log ("fin del nivel");
 			StopCoroutine (cuentaPlataforma ());
-			ControlMenus.instance.gameWin ();
+			if (ControlVida.instaciate.getVida () > 0) {
+				ControlMenus.instance.gameWin ();
+			} else {
+				ControlMenus.instance.gameOver();
+			}
 		} else {
 			StartCoroutine (cuentaPlataforma());
 		}

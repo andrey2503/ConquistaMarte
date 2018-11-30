@@ -2209,7 +2209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   escena: Pantalla3
   escenaActual: Pantalla2
-  escenaMenu: PantallaMen
+  escenaMenu: PantallaMenu
   tiempoEspera: 2
 --- !u!4 &515077787
 Transform:
