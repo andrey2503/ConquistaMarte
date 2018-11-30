@@ -6,15 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/PantallaMenu.unity
+    guid: 78ebb22f733bbec428f7b54cb5320d17
+  - enabled: 0
     path: Assets/Scenes/Game.unity
     guid: 9c3710417c9b995449ff924fcc50c5ff
   - enabled: 1
     path: Assets/Scenes/Pantalla1.unity
     guid: cd58c966121e61643bf726177ca9f3b1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/robert.unity
     guid: b9c5bb83a16dd9043a2cd1597c29c5d7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Game3(Rover).unity
     guid: 8ff32d22631066048abc03ed51daa607
   - enabled: 1
@@ -27,6 +30,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Pantalla4.unity
     guid: 9afa48ab0d1f80644a06375693ae3978
   - enabled: 1
-    path: Assets/Scenes/PantallaMenu.unity
-    guid: 78ebb22f733bbec428f7b54cb5320d17
+    path: Assets/Scenes/Pantalla5.unity
+    guid: 6168728497ffd2943858b9c8673fa7a7
   m_configObjects: {}

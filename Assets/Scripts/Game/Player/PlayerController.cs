@@ -68,18 +68,20 @@ public class PlayerController : MonoBehaviour
             float translation = 1.1f * Time.deltaTime * speed;
             if (buttonLeftPressed && buttonRightPressed)
             {
-                Vector3 v3 = new Vector3(0, translation, 0);
-                m_Rigidbody.AddRelativeForce(v3);
-            }
-            else if (buttonLeftPressed)
-            {
-                Vector3 v3 = new Vector3(-translation, 0, 0);
-                m_Rigidbody.AddRelativeForce(v3);
+                m_Rigidbody.AddForce(transform.up * translation);
+                controlParticles(6f, false, false, true);
             }
             else if (buttonRightPressed)
             {
-                Vector3 v3 = new Vector3(translation, 0, 0);
-                m_Rigidbody.AddRelativeForce(v3);
+                m_Rigidbody.AddForce(transform.up * translation);
+                m_Rigidbody.AddTorque(new Vector3(0, 0, translation * .1f));
+                controlParticles(6f, false, true, false);
+            }
+            else if (buttonLeftPressed)
+            {
+                m_Rigidbody.AddForce(transform.up * translation);     
+                m_Rigidbody.AddTorque(new Vector3(0, 0, -translation * .1f));            
+                controlParticles(6f, true, false, false);
             }
         }
     }
