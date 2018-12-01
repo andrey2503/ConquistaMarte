@@ -16496,20 +16496,21 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114786561490446568, guid: 541e0cf9c8f587f4883533f53db3e6d1,
+    - target: {fileID: 114286156514251364, guid: 541e0cf9c8f587f4883533f53db3e6d1,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 110197890}
+      objectReference: {fileID: 324352198}
     - target: {fileID: 114478121663984490, guid: 541e0cf9c8f587f4883533f53db3e6d1,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 110197890}
-    - target: {fileID: 1635541540747038, guid: 541e0cf9c8f587f4883533f53db3e6d1, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 114786561490446568, guid: 541e0cf9c8f587f4883533f53db3e6d1,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 110197890}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 541e0cf9c8f587f4883533f53db3e6d1, type: 2}
   m_IsPrefabAsset: 0
@@ -26812,7 +26813,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.023555357, y: 0.47422582}
   m_AnchorMax: {x: 0.9695553, y: 0.51600003}
-  m_AnchoredPosition: {x: -641.99994, y: 520.99976}
+  m_AnchoredPosition: {x: -642, y: 520.99976}
   m_SizeDelta: {x: 4, y: 7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1993750847

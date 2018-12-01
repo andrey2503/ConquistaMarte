@@ -22,6 +22,7 @@ public class ControlMenus : MonoBehaviour {
 
 	public void pausarJuego(){
 		gamepause.SetActive (true);
+		Time.timeScale = 0;
 	}//
 
 	public void gameOver(){
@@ -35,4 +36,11 @@ public class ControlMenus : MonoBehaviour {
 	public void SiguienteNivel (string nivel){
 			
 	}// fin de siguiente nivel
+
+	public void reanudarJuego(){
+		Time.timeScale = 1;
+		gamepause.SetActive (false);
+
+	}
+
 }
