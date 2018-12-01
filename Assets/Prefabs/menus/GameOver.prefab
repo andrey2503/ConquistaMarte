@@ -110,7 +110,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Reiniciar
+  m_Text: Restart
 --- !u!114 &114772726308221476
 MonoBehaviour:
   m_ObjectHideFlags: 1

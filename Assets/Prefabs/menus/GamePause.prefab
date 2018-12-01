@@ -180,7 +180,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Reiniciar
+  m_Text: Restart
 --- !u!114 &114286156514251364
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -344,7 +344,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Menu
+  m_Text: Home
 --- !u!114 &114786561490446568
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -510,7 +510,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Reanudar
+  m_Text: Continue
 --- !u!222 &222050725142908084
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -633,7 +633,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -9.099998, y: 1.7999992}
+  m_AnchoredPosition: {x: -9.099998, y: 92}
   m_SizeDelta: {x: 541.6, y: 302.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224640962502086242
