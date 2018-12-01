@@ -12,7 +12,7 @@ public class FinalManager : MonoBehaviour {
 
     // Update is called once per frame
     private IEnumerator goHome() {
-		yield return new WaitForSeconds (50);
-		SceneManager.LoadScene ("Pantalla1");
+		yield return new WaitForSeconds (60);
+		SceneManager.LoadScene ("PantallaMenu");
 	}
 }
